@@ -1,6 +1,5 @@
 
-
-var str=`97481313741`
+var str=`9748`
 
 var arr=str.split("").map(Number)
 
@@ -20,7 +19,8 @@ function sort(arr,l,r){
 
 function merge(arr,l,mid,r){
     var n1=mid-l+1;
-    var n2=r-mid;   // these will the length of the two array we are gonna make merge
+    var n2=r-mid;   // these will the length of the two array we are gonna make
+                    // merge
     
     var a=[];
     var b=[];
@@ -62,5 +62,30 @@ while(j<n2){
 
 }
 
-sort(arr,l,r)
-console.log(arr.join(" "));
+
+
+function runProgram(input){
+    var newInput = input.split("\n");
+  var arr=newInput[1].split(" ").map(Number)
+  var l=0
+  var r=arr.length-1
+  sort(arr,l,r)
+  console.log(arr.join(" "));
+}
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+let read = "";
+process.stdin.on("data", function (input) {
+   read += input;
+});
+process.stdin.on("end", function () {
+   read = read.replace(/\n$/,"")
+  runProgram(read);
+});
+process.on("SIGINT", function () {
+   read = read.replace(/\n$/,"")
+   runProgram(read);
+   process.exit(0);
+});
+runProgram(`5
+3 5 0 9 8`)
