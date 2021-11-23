@@ -10,11 +10,7 @@ var res=[];
 // Create the function to find the sub sequence
 function subsequence(arr,index,res){
     if(index===arr.length){
-        var sum=0
-        for(var i=0;i<res.length;i++){
-            sum=sum+res[i]
-        }
-        console.log(sum);
+        console.log(res);
     }
     else{
         subsequence(arr,index+1,res)

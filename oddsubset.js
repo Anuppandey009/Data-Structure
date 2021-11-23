@@ -9,12 +9,14 @@ function runProgram(input){
     
     function oddset(arr,index,res){
         if(index===arr.length){
+            console.log(res);
           var sum=res.reduce((x,y)=>x+y,0)
-         
+       
           if(sum%2==1 || sum%2==-1){
               count++
           }
-        // console.log(sum)
+       
+          
     
           
         }
@@ -50,3 +52,5 @@ process.on("SIGINT", function () {
    runProgram(read);
    process.exit(0);
 });
+runProgram(`7
+-3 -1 -10 8 -5 0 7 `)

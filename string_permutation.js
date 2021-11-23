@@ -16,7 +16,7 @@ function print(str,ans){
 
     for(var i=0;i<str.length;i++){
         var ch=str.charAt(i)
-        var left=str.subs
+        
         var left=str.substr(0,i)
         var right=str.substr(i+1)
         var rest=left+right;

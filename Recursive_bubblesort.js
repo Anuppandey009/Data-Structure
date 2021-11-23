@@ -23,8 +23,6 @@ function sort(arr,n){
         return sort(arr,n-1)
     }
 }
-// sort(arr,n)
-// console.log(arr);
 
 
 

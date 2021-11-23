@@ -37,7 +37,7 @@ function runProgram(input){
    
    if(res.length!=0){
       min=arr[0]
-      max=arr[arr.length-2]
+      max=arr[res.length-1]
       console.log(min,max);
    }
    else{
